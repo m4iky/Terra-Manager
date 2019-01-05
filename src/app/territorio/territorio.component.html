@@ -1,0 +1,40 @@
+<div class="form col-15">
+    <div class="form-row col-12 card card-body">
+      <div class="form-group ">
+          Nombre de Territorio
+
+        <input type="text"  [readonly]="!permiso" [(ngModel)]="territorio.nombre" class="form-control" placeholder="Nombre" name='nombre'>
+      </div>
+      
+      <div class="form-group">
+          Número
+        <input type="text"  [readonly]="!permiso" [(ngModel)]="territorio.numero" class="form-control" placeholder="#" name='numero'>
+      </div>
+      
+      <div class="form-group">
+          Descripción
+
+        <textarea type="text"  [readonly]="!permiso" [(ngModel)]="territorio.descripcion" class="form-control" name="descripcion" rows="4" maxlength="50" placeholder="Descripción"></textarea>
+      </div>
+      
+      <div class="form-group">
+          Encargado
+
+        <input type="text" [(ngModel)]="territorio.encargado" class="form-control" disabled placeholder="Encargado">
+      </div>
+
+
+      
+    </div>
+        <div class="col-12">
+          <div class="card card-body">
+  
+              <h4 class="box-title m-b-0">Mapa</h4>
+  
+              <img [src]="territorio.img"  class='img-rounded img-fluid'>
+              <h5 class="box-title m-b-0">{{territorio.nombre }}</h5>
+          </div>
+      </div>
+    
+    <button class="btn btn-success btn-block">Guardar</button>
+  </div>
